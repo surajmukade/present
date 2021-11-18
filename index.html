@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Machine Condition Monitoring using Bearing Vibration Data</title>
+
+		<meta name="description" content="Team Name : KaiZen (Japanese term meaning Continuous Improvement)">
+		<meta name="author" content="Arun Prasath">
+		<meta name="author" content="Suraj Mukade">
+		<meta name="author" content="Anushri Jain">
+		<meta name="author" content="Shaleen Jain">
+		<meta name="author" content="Vipul Garg">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Machine Condition Monitoring using Bearing Vibration Data</h2>
+					<p>Team Name : KaiZen</p>
+					<p>
+						<small>Created by <a href="http://hakim.se">"Arun Prasath"</a>(EE BARC)</small>
+					
+						<small><a href="http://hakim.se">"Suraj Mukade" </a> (CS BARC) <a href="https://github.com/hakimel/reveal.js/graphs/contributors"></a></small>
+					
+						<small><a href="http://hakim.se">"Anushri Jain"</a>(CS BARC)</small>
+					
+						<small><a href="http://hakim.se">"Shaleen Jain"</a>(CS BARC) <a href="https://github.com/hakimel/reveal.js/graphs/contributors"></a></small>
+						<small><a href="http://hakim.se">"Vipul Garg"</a>(IE BARC)  <a href="https://github.com/hakimel/reveal.js/graphs/contributors"></a></small>
+				</p>
+				</section>
+
+				
+				<!-- Example of nested vertical slides -->
+				<section >
+					<section>
+						<a href="#" class="navigate-down">
+							<img width="500" height="400" data-src="fault.gif" alt="Down arrow">
+						</a>
+						<h2>The Problem-Fault Diagnosis</h2>
+						<p>Complexities involved and current techniques.</p>
+						
+						<br>
+					
+					</section>
+					<section>
+						<h2>Vibration Sensors</h2>
+						<p>To catch the machine vibrations in different directions (x, y and z)</p>
+					</section>
+					<section>						
+						<p>Experts manually looking at the vibration patterns using techniques like spectrum analysis etc</p>
+						
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+					
+				</section>
+				
+				<!-- Example of nested vertical slides -->
+				<section >
+					<section>
+						<a href="#" class="navigate-down">
+							<img width="500" height="400" data-src="DeepNet.gif" alt="Down arrow">
+						</a>
+						<h2>Into the Machine Learning</h2>
+						<p>Possibilities and Beyond.</p>
+						<!--<p>Use the <em>Space</em> key to go deep.</p>-->
+						<br>
+					
+					</section>
+					<section>
+					<q>
+					 It can be very diﬃcult to extract high-level, abstract features
+from raw data. Deep learning solves this central problem in representation learning by intro-ducing representations that are expressed in terms of other, simpler representations.
+					</q>
+					- Ian Goodfellow (MIT Press)
+					</section>
+					<section>
+						
+						<p>Modeling non-linear behavior of the system : Machine faults comes from component degradation, propogation of fault from other parts of machine, failure of more or one parts</p>
+						<video data-autoplay src="test2.mp4"></video>
+					</section>
+					
+					
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				
+								<!-- Example of nested vertical slides -->
+				<section >
+					<section>
+						
+						<h2>About Datasets</h2>
+						<ul>
+						<li>MAFAULDA by University of Brazil<small>
+						This database is composed of 1951 multivariate time-series acquired by sensors on a 
+						SpectraQuest's Machinery Fault Simulator (MFS) Alignment-Balance-Vibration (ABVT). 
+						The 1951 comprises six different simulated states: normal function, imbalance fault, horizontal and vertical misalignment faults and, inner and outer bearing faults. </small></li>
+
+						<li>NASA IMS Dataset  <small> The data set was provided by the Center for Intelligent Maintenance Systems (IMS), University of Cincinnati.</small></li>
+
+					</ul>
+						<br>
+					
+					</section>
+
+
+				</section>
+				
+				<section >
+					<section>
+						<a href="#" class="navigate-down">
+							<img width="500" height="400" data-src="OyGx.gif" alt="Down arrow">
+						</a>
+						<h2>Models Studied</h2>
+						<p>Two schools of Learning - Unsuperwised and Superwised</p>						
+						
+						<br>
+					
+					</section>
+					<section>
+						<p>NASA Dataset for Unsuperwised</p>
+						<p>K means Clustering</p>
+					</section>
+					<section>
+						<h2>Imagined three clusters</h2>
+						<p>Normal, Pre-failure, Faulty</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+				<!-- Example of nested vertical slides -->
+				
+				<section >
+					<section>
+					
+						<h2>Superwised Learning</h2>
+						<p>To Classify different types of faults</p>
+						<ul>
+						<li>Simple Nural Network</li>
+						<li>Support Vector Machines</li>
+						<li>LSTM </li>
+						<li>CNN</li>
+						<li>RNN</li>
+						
+						</ul>
+						<p>Use the <em>Space</em> key to go deep.</p>
+						<br>
+					
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<img width="500" height="400" data-src="LSTM-res.png" alt="Down arrow">
+						</a>
+						<h2>LSTM</h2>
+						<p>Training loss, 0.0776 , Training accuracy, 0.9895 , val_loss, 0.3172 , val_accuracy, 0.9167</p>
+						<!--<p>Use the <em>Space</em> key to go deep.</p>-->
+						<br>
+					
+					</section>
+
+				</section>
+
+
+				<!-- Example of nested vertical slides -->
+				<section >
+					<section>
+						<a href="#" class="navigate-down">
+							<img width="500" height="400" data-src="Research.gif" alt="Down arrow">
+						</a>
+						<h2>Summary of Study</h2>
+						<p>Comparing Models on different Performance</p>
+						
+						<br>
+					
+					</section>
+					<section>
+					<!--img width="400" height="500" data-src="online-cert.png" alt="Down arrow"-->
+					<p>Compare Table</p>
+					
+						<table>
+							<thead><tr>
+								<th>Model</th>
+								<th>Tr.Accuracy</th>
+								<th>Test.Accuracy</th>
+							</tr></thead>
+							<tbody><tr>
+								<td>LSTM</td>
+								<td>98%</td>
+								<td>92%</td>
+							</tr>
+							<tr>
+								<td>CNN</td>
+								<td>%</td>
+								<td>%</td>
+							</tr>
+							
+							<tr>
+								<td>Shallow NN</td>
+								<td>98%</td>
+								<td>60%</td>
+							</tr>
+							<tr>
+								<td>Any Other</td>
+								<td>%</td>
+								<td>%</td>
+							</tr>
+							</tbody>
+							</table>
+					
+					</section>
+					<section>
+					<!--img width="400" height="500" data-src="online-cert.png" alt="Down arrow"-->
+					<h2>Gray areas and challenges</h2>
+					<ul>
+					
+						<li>Data driven models/systems are emerging area of research </li>
+						<li>Quality of Data and Correlation with incidents is important</li>						
+					</ul>
+					
+					</section>
+
+					<section>
+					<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+				</section>
+				</section>
+				<section>
+					<h1> Thank you. <h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
